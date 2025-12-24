@@ -6,7 +6,61 @@
     <title>Bangla Service Portal | bangla.fpr.net</title>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
+    <meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bangla FPR">
+<link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkJhbmdsYSBGUFIiLAogICJzaG9ydF9uYW1lIjogIkJhbmdsYUZQUiIsCiAgInN0YXJ0X3VybCI6ICIvIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAidGhlbWVfY29sb3IiOiAiIzAwNmE0ZSIsCiAgImljb25zIjogW3sgInNyYyI6ICJodHRwczovL3d3dy5nb29nbGUuY29tL3MyL2Zhdmljb25zP3N6PTUxMiZkb21haW49YmFuZ2xhLmZwci5uZXQiLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyIgfV0KfQ==">
+
+<script type="text/javascript">
+(function() {
+    // ২. ডোমেইন প্রোটেকশন (bangla.fpr.net এর জন্য)
+    var _0xdf = "YmFuZ2xhLmZwci5uZXQ="; // bangla.fpr.net
+    var _0xrl = "aHR0cHM6Ly9iYW5nbGEuZnByLm5ldC8="; // Redirect Link
+    
+    if (window.location.hostname.indexOf(atob(_0xdf)) === -1) {
+        document.documentElement.innerHTML = `
+        <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#ff0000;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:999999999;font-family:sans-serif;text-align:center;padding:20px;">
+            <h1 style="font-size:80px;margin:0;">\u099A\u09CB\u09B0! \u099A\u09CB\u09B0!</h1>
+            <p style="font-size:30px;">\u098F\u098ই \u0995\u09CB\u09A1\u099টি \u099A\u09CB\u09B0\u09BE\u098ই \u0995\u09B0\u09BE\u0964</p>
+            <p style="font-size:20px;">\u09E9 \u09B8\u09C7\u0995\u09C7\u09A8\u09CD\u09A1 \u09AA\u09B0 \u0986\u09B8\u09B2 \u09B8\u09BE\u098ই\u099F\u09C7 \u09A8\u09BF\u09DF\u09C7 \u09AF\u09BE\u0993\u09DF\u09BE \u09B9\u099A\u09CD\u099B\u09C7...</p>
+        </div>`;
+        setTimeout(function() { window.location.href = atob(_0xrl); }, 3000);
+        return;
+    }
+
+    // ৩. সার্ভিস ওয়ার্কার (ইনস্টল সুবিধার জন্য আবশ্যক)
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('data:application/javascript;base64,c2VsZi5hZGRFdmVudExpc3RlbmVyKCdpbnN0YWxsJywgKCkgPT4gc2VsZi5za2lwV2FpdGluZygpKTsgc2VsZi5hZGRFdmVudExpc3RlbmVyKCdhY3RpdmF0ZScsICgpID0+IHNlbGYuY2xpZW50cy5jbGFpbSgpKTs=');
+    }
+
+    // ৪. ডেস্কটপ এবং মোবাইল উভয়ের জন্য অটো-ইনস্টল প্রম্পট লজিক
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // ব্রাউজারের ডিফল্ট প্রম্পট আটকে দেওয়া
+        e.preventDefault();
+        deferredPrompt = e;
+        
+        // ভিজিটর আসার ৪ সেকেন্ড পর অটোমেটিক পপ-আপ দেখাবে
+        setTimeout(() => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('App installed successfully');
+                    }
+                    deferredPrompt = null;
+                });
+            }
+        }, 4000); // ৪ সেকেন্ড পর প্রম্পট আসবে
+    });
+
+    // ৫. ইনস্টল হয়ে গেলে বা অ্যাপ মোডে থাকলে কনসোল মেসেজ
+    window.addEventListener('appinstalled', (evt) => {
+        console.log('Bangla FPR app installed on device.');
+    });
+})();
+</script><script>
         // 
         var link = document.createElement('link');
         link.rel = 'stylesheet';
