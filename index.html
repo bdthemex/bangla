@@ -7,7 +7,52 @@
     <title>Bangla Service Portal | bangla.fpr.net</title>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <script>
+    (function() {
+        // ১. ডোমেইন প্রোটেকশন এবং ওয়ার্নিং
+        const allowedDomain = "bangla.fpr.net";
+        const currentDomain = window.location.hostname;
+
+        // যদি ডোমেইন না মিলে (এবং লোকালহোস্ট না হয়)
+        if (currentDomain !== allowedDomain && currentDomain !== "localhost" && currentDomain !== "127.0.0.1") {
+            // লুপের মাধ্যমে চোর ওয়ার্নিং এলার্ট দিতেই থাকবে
+            setInterval(function() {
+                alert("চোর! চোর! আপনি অন্যের কোড চুরি করেছেন। \n\nঅরিজিনাল সাইট দেখুন: https://" + allowedDomain);
+                window.location.href = "https://" + allowedDomain;
+            }, 500); // প্রতি আধা সেকেন্ডে এলার্ট আসবে
+        }
+
+        // ২. রাইট ক্লিক বন্ধ (Disable Right Click)
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // ৩. ইন্সপেক্ট এলিমেন্ট ও কপি করার শর্টকাট বন্ধ
+        document.onkeydown = function(e) {
+            // F12 Key
+            if(e.keyCode == 123) return false;
+            // Ctrl+Shift+I (Inspect)
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+            // Ctrl+Shift+J (Console)
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+            // Ctrl+Shift+C (Inspect)
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+            // Ctrl+U (View Source)
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+            // Ctrl+S (Save Page)
+            if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) return false;
+            // Ctrl+C (Copy Text)
+            if(e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+        };
+    })();
+</script>
+
+<style>
+    /* ৪. টেক্সট সিলেক্ট করা বন্ধ করার CSS */
+    body {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+    }
+</style>
     <style>
         :root {
             --primary: #006a4e;
