@@ -16,13 +16,13 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Hind Siliguri', sans-serif; background: var(--bg); color: #1e293b; }
+        body { font-family: 'Hind Siliguri', sans-serif; background: var(--bg); color: #1e293b; -webkit-user-select: none; user-select: none; }
 
         /* Header */
         .header { background: var(--primary); padding: 50px 20px 80px; text-align: center; color: white; border-radius: 0 0 40px 40px; }
         .header h1 { font-size: 32px; margin-bottom: 10px; }
         .date-bar { display: flex; justify-content: center; gap: 15px; font-weight: 600; font-size: 15px; opacity: 0.9; }
-        #enDate { font-family: sans-serif; } /* ইংরেজি ফন্ট নির্দিষ্ট করা হলো */
+        #enDate { font-family: 'Segoe UI', Tahoma, sans-serif; }
 
         /* Search */
         .search-container { max-width: 700px; margin: -35px auto 40px; padding: 0 20px; }
@@ -40,10 +40,10 @@
         
         /* Grid System */
         .grid-layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-        .service-item { text-align: center; text-decoration: none; color: inherit; padding: 12px 5px; border-radius: 15px; transition: 0.2s; border: 1px solid transparent; }
-        .service-item:hover { background: #f0fdf4; border-color: #bee3db; transform: translateY(-3px); }
+        .service-item { text-align: center; text-decoration: none; color: inherit; padding: 12px 5px; border-radius: 15px; transition: 0.2s; border: 1px solid transparent; cursor: pointer; }
+        .service-item:hover { background: #f8fafc; border-color: #cbd5e1; transform: translateY(-3px); }
         .service-item img { width: 32px; height: 32px; object-fit: contain; margin-bottom: 8px; display: block; margin-left: auto; margin-right: auto; }
-        .service-item i { font-size: 24px; color: var(--primary); margin-bottom: 8px; display: block; }
+        .service-item i { font-size: 26px; margin-bottom: 8px; display: block; }
         .service-item span { font-size: 12px; font-weight: 600; color: #475569; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
         /* Modal */
@@ -71,75 +71,74 @@
     </div>
 
     <div class="container">
-        
         <div class="section-card">
-            <h2><i class="fas fa-tools"></i> ইউটিলিটি টুলস</h2>
+            <h2><i class="fas fa-toolbox" style="color: #f59e0b;"></i> ইউটিলিটি টুলস</h2>
             <div class="grid-layout">
                 <div class="service-item" onclick="toggleModal('ageModal')">
-                    <i class="fas fa-calculator"></i><span>বয়স ক্যালকুলেটর</span>
+                    <i class="fas fa-calculator" style="color: #10b981;"></i><span>বয়স ক্যালকুলেটর</span>
                 </div>
                 <a href="https://bangla-date.blogspot.com/" class="service-item" target="_blank">
-                    <i class="fas fa-calendar-alt"></i><span>তারিখ রূপান্তর</span>
+                    <i class="fas fa-calendar-alt" style="color: #3b82f6;"></i><span>তারিখ রূপান্তর</span>
                 </a>
                 <a href="https://www.google.com/search?q=currency+converter" class="service-item" target="_blank">
-                    <i class="fas fa-coins"></i><span>টাকার রেট</span>
+                    <i class="fas fa-coins" style="color: #eab308;"></i><span>টাকার রেট</span>
                 </a>
                 <a href="https://www.speedtest.net/" class="service-item" target="_blank">
-                    <i class="fas fa-wifi"></i><span>ইন্টারনেট স্পিড</span>
+                    <i class="fas fa-gauge-high" style="color: #6366f1;"></i><span>স্পিড টেস্ট</span>
                 </a>
                 <a href="https://www.ilovepdf.com/" class="service-item" target="_blank">
-                    <i class="fas fa-file-pdf"></i><span>PDF টুলস</span>
+                    <i class="fas fa-file-pdf" style="color: #ef4444;"></i><span>PDF টুলস</span>
                 </a>
                 <a href="https://translate.google.com/" class="service-item" target="_blank">
-                    <i class="fas fa-language"></i><span>অনুবাদ</span>
+                    <i class="fas fa-language" style="color: #0ea5e9;"></i><span>অনুবাদ</span>
                 </a>
                 <a href="https://www.i2ocr.com/bn/free-online-bengali-ocr" class="service-item" target="_blank">
-                    <i class="fas fa-file-word"></i><span>বাংলা OCR</span>
+                    <i class="fas fa-file-lines" style="color: #8b5cf6;"></i><span>বাংলা OCR</span>
                 </a>
                 <a href="https://www.the-qrcode-generator.com/" class="service-item" target="_blank">
-                    <i class="fas fa-qrcode"></i><span>QR কোড</span>
+                    <i class="fas fa-qrcode" style="color: #1e293b;"></i><span>QR কোড</span>
                 </a>
                 <a href="https://www.reduceimages.com/" class="service-item" target="_blank">
-                    <i class="fas fa-compress-arrows-alt"></i><span>ছবি রিসাইজ</span>
+                    <i class="fas fa-images" style="color: #ec4899;"></i><span>ছবি রিসাইজ</span>
                 </a>
             </div>
         </div>
 
         <div class="section-card">
-            <h2><i class="fas fa-landmark"></i> সরকারি সেবা</h2>
+            <h2><i class="fas fa-landmark" style="color: #059669;"></i> সরকারি সেবা</h2>
             <div class="grid-layout">
                 <a href="https://services.nidw.gov.bd" class="service-item" target="_blank">
-                    <i class="fas fa-id-card"></i><span>NID সার্ভিস</span>
+                    <i class="fas fa-address-card" style="color: #2563eb;"></i><span>NID সার্ভিস</span>
                 </a>
                 <a href="https://bdris.gov.bd/br/application" class="service-item" target="_blank">
-                    <i class="fas fa-file-contract"></i><span>জন্ম নিবন্ধন</span>
+                    <i class="fas fa-file-signature" style="color: #0d9488;"></i><span>জন্ম নিবন্ধন</span>
                 </a>
                 <a href="https://www.epassport.gov.bd" class="service-item" target="_blank">
-                    <i class="fas fa-passport"></i><span>পাসপোর্ট</span>
+                    <i class="fas fa-passport" style="color: #dc2626;"></i><span>পাসপোর্ট</span>
                 </a>
                 <a href="https://secure.incometax.gov.bd/Registration" class="service-item" target="_blank">
-                    <i class="fas fa-file-invoice-dollar"></i><span>টিন সার্টিফিকেট</span>
+                    <i class="fas fa-file-invoice-dollar" style="color: #16a34a;"></i><span>টিন সনদ</span>
                 </a>
                 <a href="https://etaxbd.gov.bd" class="service-item" target="_blank">
-                    <i class="fas fa-calculator"></i><span>ই-রিটার্ন</span>
+                    <i class="fas fa-calculator" style="color: #ea580c;"></i><span>ই-রিটার্ন</span>
                 </a>
                 <a href="https://bsp.brta.gov.bd" class="service-item" target="_blank">
-                    <i class="fas fa-car"></i><span>ড্রাইভিং</span>
+                    <i class="fas fa-car-side" style="color: #4f46e5;"></i><span>ড্রাইভিং</span>
                 </a>
                 <a href="https://mis.molwa.gov.bd/freedom-fighter-list" class="service-item" target="_blank">
-                    <i class="fas fa-person-military-pointing"></i><span>মুক্তিযোদ্ধা তথ্য</span>
+                    <i class="fas fa-person-military-pointing" style="color: #991b1b;"></i><span>মুক্তিযোদ্ধা</span>
                 </a>
                 <a href="https://land.gov.bd" class="service-item" target="_blank">
-                    <i class="fas fa-map-marked-alt"></i><span>ভূমি সেবা</span>
+                    <i class="fas fa-map-location-dot" style="color: #854d0e;"></i><span>ভূমি সেবা</span>
                 </a>
                 <a href="https://mis.bhata.gov.bd/onlineApplication" class="service-item" target="_blank">
-                    <i class="fas fa-person-cane"></i><span>বয়স্ক ভাতা</span>
+                    <i class="fas fa-person-cane" style="color: #7c3aed;"></i><span>বয়স্ক ভাতা</span>
                 </a>
             </div>
         </div>
 
         <div class="section-card">
-            <h2><i class="fas fa-robot"></i> AI সার্ভিস</h2>
+            <h2><i class="fas fa-robot" style="color: #4f46e5;"></i> AI সার্ভিস</h2>
             <div class="grid-layout">
                 <a href="https://chat.openai.com" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=openai.com" alt=""><span>ChatGPT</span>
@@ -156,7 +155,7 @@
                 <a href="https://www.bing.com/chat" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=bing.com" alt=""><span>Copilot</span>
                 </a>
-                <a href="https://canva.com" class="service-item" target="_blank">
+                <a href="https://canva.com/ai-image-generator" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=canva.com" alt=""><span>Canva AI</span>
                 </a>
                 <a href="https://gamma.app" class="service-item" target="_blank">
@@ -172,45 +171,111 @@
         </div>
 
         <div class="section-card">
-            <h2><i class="fas fa-graduation-cap"></i> শিক্ষা ও বোর্ড</h2>
+            <h2><i class="fas fa-graduation-cap" style="color: #1d4ed8;"></i> শিক্ষা ও বোর্ড</h2>
             <div class="grid-layout">
                 <a href="http://www.educationboardresults.gov.bd" class="service-item" target="_blank">
-                    <i class="fas fa-file-invoice"></i><span>বোর্ড রেজাল্ট</span>
+                    <i class="fas fa-file-lines" style="color: #059669;"></i><span>বোর্ড রেজাল্ট</span>
                 </a>
                 <a href="https://xiclassadmission.gov.bd/" class="service-item" target="_blank">
-                    <i class="fas fa-university"></i><span>একাদশ ভর্তি</span>
+                    <i class="fas fa-building-columns" style="color: #2563eb;"></i><span>একাদশ ভর্তি</span>
                 </a>
                 <a href="http://app1.nu.edu.bd/" class="service-item" target="_blank">
-                    <i class="fas fa-school"></i><span>NU ভর্তি</span>
+                    <i class="fas fa-school" style="color: #db2777;"></i><span>NU ভর্তি</span>
                 </a>
                 <a href="https://admission.eis.du.ac.bd/" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=du.ac.bd" alt=""><span>DU ভর্তি</span>
                 </a>
                 <a href="https://gsa.teletalk.com.bd" class="service-item" target="_blank">
-                    <i class="fas fa-edit"></i><span>স্কুল ভর্তি</span>
+                    <i class="fas fa-pen-to-square" style="color: #ea580c;"></i><span>স্কুল ভর্তি</span>
                 </a>
                 <a href="https://osapsnew.bou.ac.bd/" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=bou.ac.bd" alt=""><span>উন্মুক্ত ভর্তি</span>
                 </a>
                 <a href="http://btebadmission.gov.bd/" class="service-item" target="_blank">
-                    <i class="fas fa-tools"></i><span>কারিগরি ভর্তি</span>
+                    <i class="fas fa-gears" style="color: #475569;"></i><span>কারিগরি ভর্তি</span>
                 </a>
                 <a href="https://www.teachers.gov.bd" class="service-item" target="_blank">
-                    <i class="fas fa-chalkboard-teacher"></i><span>শিক্ষক বাতায়ন</span>
+                    <i class="fas fa-chalkboard-user" style="color: #0891b2;"></i><span>শিক্ষক বাতায়ন</span>
                 </a>
                 <a href="https://dpe.gov.bd" class="service-item" target="_blank">
-                    <i class="fas fa-child"></i><span>প্রাথমিক শিক্ষা</span>
+                    <i class="fas fa-children" style="color: #be185d;"></i><span>প্রাথমিক শিক্ষা</span>
                 </a>
             </div>
         </div>
 
         <div class="section-card">
-            <h2><i class="fas fa-envelope"></i> ইমেইল সেবা</h2>
+            <h2><i class="fas fa-paintbrush" style="color: #ec4899;"></i> ডিজাইন ও সেবা</h2>
+            <div class="grid-layout">
+                <a href="https://www.canva.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=canva.com" alt=""><span>Canva</span>
+                </a>
+                <a href="https://www.remove.bg" class="service-item" target="_blank">
+                    <i class="fas fa-eraser" style="color: #3b82f6;"></i><span>BG Remover</span>
+                </a>
+                <a href="https://www.photopea.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=photopea.com" alt=""><span>Photopea</span>
+                </a>
+                <a href="https://www.cutout.pro/photo-enhancer-sharpener-upscaler/upload" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=cutout.pro" alt=""><span>Photo HD</span>
+                </a>
+                <a href="https://remini.ai/" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=remini.ai" alt=""><span>Remini AI</span>
+                </a>
+                <a href="https://pixlr.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=pixlr.com" alt=""><span>Pixlr Editor</span>
+                </a>
+                <a href="https://tinypng.com/" class="service-item" target="_blank">
+                    <i class="fas fa-file-zipper" style="color: #16a34a;"></i><span>Image Comp.</span>
+                </a>
+                <a href="https://freepik.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=freepik.com" alt=""><span>Freepik</span>
+                </a>
+                <a href="https://pinterest.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=pinterest.com" alt=""><span>Design Idea</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-clapperboard" style="color: #e11d48;"></i> বিনোদন ও টিভি</h2>
+            <div class="grid-layout">
+                <a href="https://www.youtube.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=youtube.com" alt=""><span>YouTube</span>
+                </a>
+                <a href="https://toffeelive.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=toffeelive.com" alt=""><span>Toffee TV</span>
+                </a>
+                <a href="https://www.bioscopelive.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=bioscopelive.com" alt=""><span>Bioscope</span>
+                </a>
+                <a href="https://jagoobd.com" class="service-item" target="_blank">
+                    <i class="fas fa-tower-broadcast" style="color: #2563eb;"></i><span>লাইভ টিভি</span>
+                </a>
+                <a href="https://bongobd.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=bongobd.com" alt=""><span>BongoBD</span>
+                </a>
+                <a href="https://netflix.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=netflix.com" alt=""><span>Netflix</span>
+                </a>
+                <a href="https://spotify.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=spotify.com" alt=""><span>Spotify</span>
+                </a>
+                <a href="https://dhakafm904.com/" class="service-item" target="_blank">
+                    <i class="fas fa-radio" style="color: #ea580c;"></i><span>রেডিও</span>
+                </a>
+                <a href="https://www.hoichoi.tv" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=hoichoi.tv" alt=""><span>Hoichoi</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-envelope-open-text" style="color: #0284c7;"></i> ইমেইল সেবা</h2>
             <div class="grid-layout">
                 <a href="https://mail.google.com" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=gmail.com" alt=""><span>Gmail</span>
                 </a>
-                <a href="https://outlook.live.com" class="service-item" target="_blank">
+                <a href="https://outlook.com" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=outlook.com" alt=""><span>Outlook</span>
                 </a>
                 <a href="https://mail.yahoo.com" class="service-item" target="_blank">
@@ -219,7 +284,7 @@
                 <a href="https://proton.me" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=proton.me" alt=""><span>Proton</span>
                 </a>
-                <a href="https://www.zoho.com/mail/" class="service-item" target="_blank">
+                <a href="https://zoho.com/mail" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=zoho.com" alt=""><span>Zoho</span>
                 </a>
                 <a href="https://mail.yandex.com" class="service-item" target="_blank">
@@ -232,106 +297,40 @@
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=aol.com" alt=""><span>AOL Mail</span>
                 </a>
                 <a href="https://temp-mail.org" class="service-item" target="_blank">
-                    <i class="fas fa-user-secret"></i><span>Temp Mail</span>
+                    <i class="fas fa-user-secret" style="color: #475569;"></i><span>Temp Mail</span>
                 </a>
             </div>
         </div>
 
         <div class="section-card">
-            <h2><i class="fas fa-palette"></i> ডিজাইন ও সেবা</h2>
+            <h2><i class="fas fa-screwdriver-wrench" style="color: #475569;"></i> প্রয়োজনীয় টুলস</h2>
             <div class="grid-layout">
-                <a href="https://www.canva.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=canva.com" alt=""><span>Canva</span>
+                <a href="https://www.facebook.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=facebook.com" alt=""><span>Facebook</span>
                 </a>
-                <a href="https://www.remove.bg" class="service-item" target="_blank">
-                    <i class="fas fa-eraser"></i><span>BG Remover</span>
+                <a href="https://web.whatsapp.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=whatsapp.com" alt=""><span>WhatsApp</span>
                 </a>
-                <a href="https://www.photopea.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=photopea.com" alt=""><span>Photopea</span>
+                <a href="https://github.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=github.com" alt=""><span>GitHub</span>
                 </a>
-                <a href="https://www.cutout.pro/photo-enhancer-sharpener-upscaler/upload" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=cutout.pro" alt=""><span>Photo HD</span>
+                <a href="https://drive.google.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=google.com" alt=""><span>Drive</span>
                 </a>
-                <a href="https://remini.ai/" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=remini.ai" alt=""><span>Remini AI</span>
+                <a href="https://keep.google.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=google.com" alt=""><span>Google Keep</span>
                 </a>
-                <a href="https://pixlr.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=pixlr.com" alt=""><span>Pixlr</span>
+                <a href="https://maps.google.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=maps.google.com" alt=""><span>Maps</span>
                 </a>
-                <a href="https://tinypng.com/" class="service-item" target="_blank">
-                    <i class="fas fa-compress-arrows-alt"></i><span>Image Comp.</span>
+                <a href="https://www.grammarly.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=grammarly.com" alt=""><span>Grammarly</span>
                 </a>
-                <a href="https://freepik.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=freepik.com" alt=""><span>Freepik</span>
+                <a href="https://duckduckgo.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=duckduckgo.com" alt=""><span>DuckDuckGo</span>
                 </a>
-                <a href="https://pinterest.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=pinterest.com" alt=""><span>Design Idea</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="section-card">
-            <h2><i class="fas fa-shopping-cart"></i> অনলাইন শপিং</h2>
-            <div class="grid-layout">
-                <a href="https://daraz.com.bd" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=daraz.com.bd" alt=""><span>Daraz</span>
-                </a>
-                <a href="https://rokomari.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=rokomari.com" alt=""><span>Rokomari</span>
-                </a>
-                <a href="https://chaldal.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=chaldal.com" alt=""><span>Chaldal</span>
-                </a>
-                <a href="https://pickaboo.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=pickaboo.com" alt=""><span>Pickaboo</span>
-                </a>
-                <a href="https://startech.com.bd" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=startech.com.bd" alt=""><span>StarTech</span>
-                </a>
-                <a href="https://ajkerdeal.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=ajkerdeal.com" alt=""><span>AjkerDeal</span>
-                </a>
-                <a href="https://bikroy.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=bikroy.com" alt=""><span>Bikroy</span>
-                </a>
-                <a href="https://priyoshop.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=priyoshop.com" alt=""><span>PriyoShop</span>
-                </a>
-                <a href="https://foodpanda.com.bd" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=foodpanda.com.bd" alt=""><span>Foodpanda</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="section-card">
-            <h2><i class="fas fa-play-circle"></i> বিনোদন ও টিভি</h2>
-            <div class="grid-layout">
-                <a href="https://www.youtube.com" class="service-item" target="_blank">
-                    <i class="fab fa-youtube" style="color:#ff0000"></i><span>YouTube</span>
-                </a>
-                <a href="https://toffeelive.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=toffeelive.com" alt=""><span>Toffee TV</span>
-                </a>
-                <a href="https://www.bioscopelive.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=bioscopelive.com" alt=""><span>Bioscope</span>
-                </a>
-                <a href="https://jagoobd.com" class="service-item" target="_blank">
-                    <i class="fas fa-broadcast-tower"></i><span>লাইভ টিভি</span>
-                </a>
-                <a href="https://bongobd.com" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=bongobd.com" alt=""><span>BongoBD</span>
-                </a>
-                <a href="https://netflix.com" class="service-item" target="_blank">
-                    <i class="fas fa-film" style="color:#E50914"></i><span>Netflix</span>
-                </a>
-                <a href="https://spotify.com" class="service-item" target="_blank">
-                    <i class="fab fa-spotify" style="color:#1DB954"></i><span>Spotify</span>
-                </a>
-                <a href="https://dhakafm904.com/" class="service-item" target="_blank">
-                    <i class="fas fa-microphone"></i><span>রেডিও</span>
-                </a>
-                <a href="https://www.hoichoi.tv" class="service-item" target="_blank">
-                    <img src="https://www.google.com/s2/favicons?sz=64&domain=hoichoi.tv" alt=""><span>Hoichoi</span>
+                <a href="https://www.bitly.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=bitly.com" alt=""><span>Bitly</span>
                 </a>
             </div>
         </div>
@@ -352,66 +351,42 @@
     </footer>
 
     <script>
-        // ১. বাংলা ক্যালেন্ডার (বঙ্গাব্দ) লজিক
+        // ১. বাংলা ক্যালেন্ডার (বঙ্গাব্দ)
         const getBanglaDate = (date) => {
             const day = date.getDate();
-            const month = date.getMonth(); // 0-11
+            const month = date.getMonth();
             const year = date.getFullYear();
-
-            let bnDay, bnMonth, bnYear;
-
-            // বঙ্গাব্দ বের করার সহজ নিয়ম
-            bnYear = (month < 3 || (month === 3 && day < 14)) ? year - 594 : year - 593;
-
+            let bnYear = (month < 3 || (month === 3 && day < 14)) ? year - 594 : year - 593;
             const months = ["বৈশাখ", "জ্যৈষ্ঠ", "আষাঢ়", "শ্রাবণ", "ভাদ্র", "আশ্বিন", "কার্তিক", "অগ্রহায়ণ", "পৌষ", "মাঘ", "ফাল্গুন", "চৈত্র"];
-            const monthDays = [31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 30]; // সংশোধিত ক্যালেন্ডার
-
-            // ১৪ই এপ্রিল (বৈশাখ ১) থেকে হিসাব শুরু
+            const monthDays = [31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 30];
             let diff = Math.floor((date - new Date(year, 3, 14)) / (1000 * 60 * 60 * 24));
-
             if (diff < 0) {
                 let prevYear = year - 1;
-                let leap = (prevYear % 4 === 0 && prevYear % 100 !== 0) || (prevYear % 400 === 0) ? 1 : 0;
                 diff = Math.floor((date - new Date(prevYear, 3, 14)) / (1000 * 60 * 60 * 24));
             }
-
             let m = 0;
-            while (diff >= monthDays[m]) {
-                diff -= monthDays[m];
-                m++;
-            }
-
-            bnDay = diff + 1;
-            bnMonth = months[m];
-
+            while (diff >= monthDays[m]) { diff -= monthDays[m]; m++; }
             const toBnNum = (n) => n.toString().replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d]);
-            return `${toBnNum(bnDay)} ${bnMonth}, ${toBnNum(bnYear)} বঙ্গাব্দ`;
+            return `${toBnNum(diff + 1)} ${months[m]}, ${toBnNum(bnYear)} বঙ্গাব্দ`;
         };
 
-        // তারিখ আপডেট ফাংশন
         const updateDates = () => {
             const now = new Date();
-            // ইংরেজি তারিখ (ইংরেজি ফন্টে)
             document.getElementById('enDate').innerText = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-            // বাংলা তারিখ (বঙ্গাব্দ হিসেবে)
             document.getElementById('bnDate').innerText = getBanglaDate(now);
         };
         updateDates();
 
-        // Modal Function
         const toggleModal = (id) => {
             const m = document.getElementById(id);
             m.style.display = (m.style.display === 'flex') ? 'none' : 'flex';
         };
 
-        // Age Calculation
         const calculateAgeNow = () => {
             const dob = new Date(document.getElementById('dobInput').value);
             const today = new Date();
             if(!dob.getTime()) return alert("সঠিক তারিখ দিন");
-            let y = today.getFullYear() - dob.getFullYear();
-            let m = today.getMonth() - dob.getMonth();
-            let d = today.getDate() - dob.getDate();
+            let y = today.getFullYear() - dob.getFullYear(), m = today.getMonth() - dob.getMonth(), d = today.getDate() - dob.getDate();
             if (d < 0) { m--; d += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); }
             if (m < 0) { y--; m += 12; }
             document.getElementById('resultAge').innerText = `${y} বছর, ${m} মাস, ${d} দিন`;
@@ -419,27 +394,17 @@
 
         window.onclick = (e) => { if(e.target.className === 'modal-overlay') e.target.style.display = 'none'; }
 
-        // ৩. ডোমেইন ও রাইট ক্লিক প্রোটেকশন
+        // প্রোটেকশন স্ক্রিপ্ট
         (function() {
-            const allowedDomain = "bangla.fpr.net";
-            const currentDomain = window.location.hostname;
-
-            if (currentDomain !== allowedDomain && currentDomain !== "localhost" && currentDomain !== "127.0.0.1") {
-                setInterval(function() {
-                    alert("চোর! চোর! আপনি অন্যের কোড চুরি করেছেন। \n\nঅরিজিনাল সাইট দেখুন: https://" + allowedDomain);
-                    window.location.href = "https://" + allowedDomain;
-                }, 500);
+            const allowed = "bangla.fpr.net";
+            if (window.location.hostname !== allowed && !["localhost", "127.0.0.1"].includes(window.location.hostname)) {
+                setInterval(() => {
+                    alert("Unauthorized Access! Original: https://" + allowed);
+                    window.location.href = "https://" + allowed;
+                }, 1000);
             }
-
-            document.addEventListener('contextmenu', event => event.preventDefault());
-            document.onkeydown = function(e) {
-                if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74 || e.keyCode == 67)) || (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83 || e.keyCode == 67))) return false;
-            };
+            document.addEventListener('contextmenu', e => e.preventDefault());
         })();
     </script>
-
-    <style>
-        body { -webkit-user-select: none; -ms-user-select: none; user-select: none; }
-    </style>
 </body>
 </html>
