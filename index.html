@@ -6,14 +6,14 @@
     <title>Bangla Service Portal | bangla.fpr.net</title>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script>
-    // ডাইনামিকালি সিএসএস লিঙ্ক যুক্ত করা (সোর্স কোডে সরাসরি দেখা যাবে না)
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'sakib-bdthemex.css'; // আপনার সিএসএস ফাইলের নাম
-    document.getElementsByTagName('head')[0].appendChild(link);
-</script>
+    <script>
+        // ডাইনামিকালি সিএসএস লিঙ্ক যুক্ত করা
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'sakib-bdthemex.css'; 
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 </head>
 <body>
 
@@ -127,6 +127,39 @@
                 </a>
                 <a href="https://poe.com" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=poe.com" alt=""><span>Poe AI</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-code" style="color: #3b82f6;"></i> ওয়েব ডেভেলপার জোন</h2>
+            <div class="grid-layout">
+                <a href="https://github.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=github.com" alt=""><span>GitHub</span>
+                </a>
+                <a href="https://stackoverflow.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=stackoverflow.com" alt=""><span>Stack Overflow</span>
+                </a>
+                <a href="https://code.visualstudio.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=visualstudio.com" alt=""><span>VS Code</span>
+                </a>
+                <a href="https://www.w3schools.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=w3schools.com" alt=""><span>W3Schools</span>
+                </a>
+                <a href="https://codepen.io" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=codepen.io" alt=""><span>CodePen</span>
+                </a>
+                <a href="https://fonts.google.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=fonts.google.com" alt=""><span>Google Fonts</span>
+                </a>
+                <a href="https://colorhunt.co" class="service-item" target="_blank">
+                    <i class="fas fa-palette" style="color: #f43f5e;"></i><span>Color Hunt</span>
+                </a>
+                <a href="https://www.netlify.com" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=netlify.com" alt=""><span>Netlify</span>
+                </a>
+                <a href="https://developer.mozilla.org" class="service-item" target="_blank">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=mozilla.org" alt=""><span>MDN Web</span>
                 </a>
             </div>
         </div>
@@ -264,7 +297,7 @@
         </div>
 
         <div class="section-card">
-            <h2><i class="fas fa-screwdriver-wrench" style="color: #475569;"></i> প্রয়োজনীয় টুলস</h2>
+            <h2><i class="fas fa-screwdriver-wrench" style="color: #475569;"></i> প্রয়োজনীয় টুলস</h2>
             <div class="grid-layout">
                 <a href="https://www.facebook.com" class="service-item" target="_blank">
                     <img src="https://www.google.com/s2/favicons?sz=64&domain=facebook.com" alt=""><span>Facebook</span>
@@ -312,7 +345,6 @@
     </footer>
 
     <script>
-        // ১. বাংলা ক্যালেন্ডার (বঙ্গাব্দ)
         const getBanglaDate = (date) => {
             const day = date.getDate();
             const month = date.getMonth();
@@ -355,7 +387,6 @@
 
         window.onclick = (e) => { if(e.target.className === 'modal-overlay') e.target.style.display = 'none'; }
 
-        // প্রোটেকশন স্ক্রিপ্ট
         (function() {
             const allowed = "bangla.fpr.net";
             if (window.location.hostname !== allowed && !["localhost", "127.0.0.1"].includes(window.location.hostname)) {
