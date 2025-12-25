@@ -12,7 +12,35 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Bangla FPR">
 <link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkJhbmdsYSBGUFIiLAogICJzaG9ydF9uYW1lIjogIkJhbmdsYUZQUiIsCiAgInN0YXJ0X3VybCI6ICIvIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAidGhlbWVfY29sb3IiOiAiIzAwNmE0ZSIsCiAgImljb25zIjogW3sgInNyYyI6ICJodHRwczovL3d3dy5nb29nbGUuY29tL3MyL2Zhdmljb25zP3N6PTUxMiZkb21haW49YmFuZ2xhLmZwci5uZXQiLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyIgfV0KfQ==">
+<link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkJhbmdsYSBGUFIiLAogICJzaG9ydF9uYW1lIjogIkJhbmdsYUZQUiIsCiAgInN0YXJ0X3VybCI6ICIvIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAidGhlbWVfY29sb3IiOiAiIzAwNmE0ZSIsCiAgImljb25zIjogW3sgInNyYyI6ICJodHRwczovL3d3dy5nb29nbGUuY29tL3MyL2Zhdmljb25zP3N6PTUxMiZkb21haW49YmFuZ2xhLmZwci5uZXQiLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyIgfV0KfQ==">
 
+<script>
+// ১. সার্ভিস ওয়ার্কার সরাসরি ইনলাইন ব্লব (Blob) হিসেবে রেজিস্টার
+const swCode = "self.addEventListener('fetch', function(event) {});";
+const blob = new Blob([swCode], {type: 'text/javascript'});
+const swUrl = URL.createObjectURL(blob);
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register(swUrl).then(() => console.log("SW Active"));
+}
+
+// ২. অটো ইনস্টল প্রম্পট
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    let deferredPrompt = e;
+    
+    // ৫ সেকেন্ড পর জোর করে প্রম্পট দেখানোর চেষ্টা
+    setTimeout(() => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choice) => {
+                if (choice.outcome === 'accepted') console.log('Installed');
+                deferredPrompt = null;
+            });
+        }
+    }, 5000);
+});
+</script>
 <script type="text/javascript">
 (function() {
     // ২. ডোমেইন প্রোটেকশন (bangla.fpr.net এর জন্য)
