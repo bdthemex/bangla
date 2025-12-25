@@ -116,35 +116,14 @@ window.addEventListener('beforeinstallprompt', (e) => {
     </div>
 
     <div class="search-container">
-        <form action="https://www.google.com/search" method="GET" target="_blank">
-  <input type="hidden" name="as_sitesearch" value="bangla.fpr.net">
-  
-  <div style="display: flex; gap: 5px; max-width: 400px;">
-    <input type="text" name="q" placeholder="bangla.fpr.net-এ খুঁজুন..." required 
-           style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+       <form action="https://www.google.com/search" method="GET" class="search-wrap" target="_blank">
+    <input type="hidden" name="client" value="aff-cs-bangla-fpr">
+    <input type="hidden" name="sourceid" value="bangla.fpr.net">
     
-    <button type="submit" style="padding: 10px 20px; background: #006a4e; color: white; border: none; border-radius: 4px; cursor: pointer;">
-      Search
-    </button>
-  </div>
-  
-  <small style="display:block; margin-top:5px; color:#777;">
-    Powered by <a href="https://bangla.fpr.net" style="color:#777; text-decoration:none;">bangla.fpr.net</a>
-  </small>
+    <input type="text" name="q" placeholder="গুগল সার্চ করুন..." required>
+    
+    <button type="submit"><i class="fas fa-search"></i></button>
 </form>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://bangla.fpr.net/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://bangla.fpr.net/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
     </div>
 
     <div class="container">
