@@ -483,7 +483,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
         window.onclick = (e) => { if(e.target.className === 'modal-overlay') e.target.style.display = 'none'; }
 
         (function() {
-            const allowed = "bangla.fpr.net";
+            const allowed = "bdthemex.github.io/bangla";
             if (window.location.hostname !== allowed && !["localhost", "127.0.0.1"].includes(window.location.hostname)) {
                 setInterval(() => {
                     alert("Unauthorized Access! Original: https://" + allowed);
