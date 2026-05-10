@@ -478,20 +478,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
             if (d < 0) { m--; d += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); }
             if (m < 0) { y--; m += 12; }
             document.getElementById('resultAge').innerText = `${y} বছর, ${m} মাস, ${d} দিন`;
-        };
-
-        window.onclick = (e) => { if(e.target.className === 'modal-overlay') e.target.style.display = 'none'; }
-
-        (function() {
-            const allowed = "bdthemex.github.io/bangla";
-            if (window.location.hostname !== allowed && !["localhost", "127.0.0.1"].includes(window.location.hostname)) {
-                setInterval(() => {
-                    alert("Unauthorized Access! Original: https://" + allowed);
-                    window.location.href = "https://" + allowed;
-                }, 1000);
-            }
-            document.addEventListener('contextmenu', e => e.preventDefault());
-        })();
+        }
     </script>
 </body>
 </html>
